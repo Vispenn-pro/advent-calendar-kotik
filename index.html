@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/advent-calendar-kotik/assets/index-BWO0F3UW.js"></script>
-    <link rel="stylesheet" crossorigin href="/advent-calendar-kotik/assets/index-dlSGEGMu.css">
+    <script type="module" crossorigin src="/advent-calendar-kotik/assets/index-D4tfmIVA.js"></script>
+    <link rel="stylesheet" crossorigin href="/advent-calendar-kotik/assets/index-Clw_npTa.css">
   </head>
   <body>
+    <iframe src="/music/silence.mp3" allow="autoplay" id="audioSilence" style="display: none"></iframe>
     <audio id="audio" loop autoplay>
       <source src="/advent-calendar-kotik/music/music.mp3" type="audio/mpeg">
     </audio>
     <script>
-      var audio = document.getElementById("audio");
+      let audio = document.getElementById("audio");
       audio.volume = 0.2;
     </script>
     <div id="root"></div>
