@@ -7,22 +7,17 @@ function App() {
     const days = [];
 
     for(let i = 2; i <= 26; i++){
-        let isVisible = false;
         let daysLeft = 0;
 
-        const todaysDateObj = new Date();
-        const todaysDate = todaysDateObj.getUTCDate() + 1;
+        let today = new Date();
+        let cardDay = new Date("12/" + i + "/2024");
 
-        const targetsDateObj = new Date("October " + i + " 2024 GMT+03:00");
-        const targetsDate = targetsDateObj.getUTCDate();
+        let Difference_In_Time =
+            cardDay.getTime() - today.getTime();
 
-        if(todaysDate >= targetsDate){
-            isVisible = true;
-        } else{
-            isVisible = false;
-            daysLeft = 25 - targetsDate;
-        }
-        days.push(<ChristmasCard key={i} day={i - 1} daysLeftParam={daysLeft} isVisibleParam={isVisible}/>)
+        daysLeft = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+
+        days.push(<ChristmasCard key={i} day={i - 1} daysLeftParam={daysLeft} />)
     }
 
     return (

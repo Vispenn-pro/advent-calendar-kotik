@@ -1,8 +1,9 @@
-#root{
+#root {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: #141412;
 }
 
 .adventCalendarMain {
@@ -16,7 +17,7 @@
     flex-flow: column nowrap;
 }
 
-.adventCalendar{
+.adventCalendar {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -25,7 +26,11 @@
     margin-right: 10%;
 }
 
-.adventCalendarCard{
+.adventCalendar .modal-content{
+    background-color: transparent !important;
+}
+
+.adventCalendarCard {
     background-color: #1a1a1a;
     display: flex;
     flex-flow: column nowrap;
@@ -34,48 +39,60 @@
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    border-color: #1a1a1a;
+    border-color: #1a1a1a !important;
     opacity: 90%;
     padding: 20px;
-    transition: 0.25s ease-in-out;
+    transition: 0.2s ease-in-out;
+    height: 125px;
+    width: 125px;
+}
+
+.adventCalendarCard:hover,
+.adventCalendarCard:focus,
+.adventCalendarCard:focus-visible,
+.adventCalendarCard:focus-within,
+.adventCalendarCard:target{
+    outline: none;
 }
 
 .adventCalendarCard.common:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(89 91 92) 0 -2px 10px, rgb(168 169 170) 0 -10px 20px, rgb(255 255 255) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(89 91 92) 0 -2px 10px,  rgb(168 169 170) 0 -10px 20px, rgb(255 255 255) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .adventCalendarCard.uncommon:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(42 91 36) 0 -2px 10px, rgb(45 170 36) 0 -10px 20px, rgb(30, 255, 0) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(42 91 36) 0 -2px 10px,  rgb(45 170 36) 0 -10px 20px, rgb(30, 255, 0) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .adventCalendarCard.rare:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(34 49 83) 0 -2px 10px, rgb(34 79 148) 0 -10px 20px, rgb(0, 112, 221) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(34 49 83) 0 -2px 10px, rgb(34 79 148) 0 -10px 20px, rgb(0, 112, 221) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .adventCalendarCard.epic:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(66 38 88) 0 -2px 10px, rgb(113 48 160) 0 -10px 20px, rgb(163, 53, 238) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(66 38 88) 0 -2px 10px,  rgb(113 48 160) 0 -10px 20px, rgb(163, 53, 238) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .adventCalendarCard.legendary:hover {
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(93 56 29) 0 -2px 10px, rgb(171 91 25) 0 -10px 20px, rgb(255, 128, 0) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: rgb(21 23 25) 0 -1px 4px, rgb(93 56 29) 0 -2px 10px,  rgb(171 91 25) 0 -10px 20px, rgb(255, 128, 0) 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
-.adventCalendarCard>span:first-child{
+.adventCalendarCard > span:first-child {
     font-size: 16px;
     font-weight: bold;
 }
 
-.adventCalendarCard>span:nth-child(2){
-    position: absolute;
-    overflow-wrap: break-word;
-    width: inherit;
-}
-
-.adventCalendarCard.flipped{
-
+.adventCalendarReward {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: #1a1a1a !important;
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
 }
