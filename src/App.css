@@ -7,7 +7,7 @@
 }
 
 .adventCalendarMain {
-    background-image: url("./assets/background.jpg");
+    background-image: url("/advent-calendar-kotik/assets/background.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;

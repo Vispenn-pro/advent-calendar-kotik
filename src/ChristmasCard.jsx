@@ -12,8 +12,8 @@ function ChristmasCard({ day, daysLeftParam }) {
     const cardDataTarget = `#card${day}`;
     const cardId = `card${day}`;
 
-    let audioOpen = new Audio("/sounds/achievement.ogg");
-    let audioDenied = new Audio("/sounds/denied.ogg");
+    let audioOpen = new Audio("/advent-calendar-kotik/sounds/achievement.ogg");
+    let audioDenied = new Audio("/advent-calendar-kotik/sounds/denied.ogg");
 
     const startOpen = () => {
         audioOpen.volume = 0.1;
