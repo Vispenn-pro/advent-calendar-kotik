@@ -17,8 +17,8 @@
     flex-flow: column nowrap;
 }
 
-.adventCalendar h1,
-.adventCalendar p{
+.adventCalendarMain h1,
+.adventCalendarMain p{
     color: white;
 }
 
