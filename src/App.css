@@ -17,6 +17,11 @@
     flex-flow: column nowrap;
 }
 
+.adventCalendar h1,
+.adventCalendar p{
+    color: white;
+}
+
 .adventCalendar {
     display: flex;
     justify-content: center;
