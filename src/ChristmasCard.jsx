@@ -5,20 +5,19 @@ import { useCookies } from 'react-cookie';
 
 function ChristmasCard({ day, daysLeftParam }) {
 
-    // ADD A DIFFERENT SHADOW FOR DIFFERENT RARITY
-    // https://html-css-js.com/css/generator/box-shadow/
     const cardClass = `adventCalendarCard availableCard ${rewards[`${day}`].rarity}`
     const rewardClass = `modal-body adventCalendarReward`
     const cardDataTarget = `#card${day}`;
     const cardId = `card${day}`;
     const cookieId = `hasCard${day}BeenOpened`;
 
-    let audioOpen = new Audio("/advent-calendar-kotik/sounds/achievement.ogg");
     let audioDenied = new Audio("/advent-calendar-kotik/sounds/denied.ogg");
 
     const [cookies, setCookie] = useCookies([cookieId]);
 
-    const startOpen = () => {
+    const startOpen = (rarity) => {
+        let audioOpen = new Audio(`/advent-calendar-kotik/sounds/${rarity}.ogg`);
+
         audioOpen.volume = 0.1;
         audioOpen.play();
         setCookie(cookieId, true);
@@ -36,13 +35,13 @@ function ChristmasCard({ day, daysLeftParam }) {
                     <span className="unavailableCard">Days left : {daysLeftParam}</span>
                 </div>
                 :
-                <button onClick={startOpen} className={cardClass} data-toggle="modal" data-target={cardDataTarget}>
+                <button onClick={() => startOpen(rewards[`${day}`].rarity)} className={cardClass} data-toggle="modal" data-target={cardDataTarget}>
                     {cookies[cookieId] ?
                         <div className="openedCard">
                             <div dangerouslySetInnerHTML={{__html: rewards[`${day}`].image}}></div>
                         </div>
                         :
-                        day
+                        day + 1
                     }
                 </button>
             }

@@ -5,16 +5,18 @@ import ChristmasCard from "./ChristmasCard.jsx";
 function App() {
     const days = [];
 
-    for(let i = 2; i <= 26; i++){
+    for(let i = 1; i <= 25; i++){
         let daysLeft = 0;
 
         let today = new Date();
         let cardDay = new Date("12/" + i + "/2024");
 
-        let Difference_In_Time =
+        let differenceInTime =
             cardDay.getTime() - today.getTime();
 
-        daysLeft = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+        daysLeft = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+
+        console.log(daysLeft)
 
         days.push(<ChristmasCard key={i} day={i - 1} daysLeftParam={daysLeft} />)
     }
