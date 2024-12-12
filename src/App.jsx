@@ -1,5 +1,4 @@
 import DateCountdown from 'react-date-countdown-timer';
-
 import './App.css';
 import ChristmasCard from "./ChristmasCard.jsx";
 
